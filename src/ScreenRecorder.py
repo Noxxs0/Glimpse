@@ -4,9 +4,11 @@ import pyautogui,os
 from threading import Thread
 from keyboard import add_hotkey,wait
 from uuid import uuid4
+from interfaces.IScreenRecorder import IScreenRecorder
+from models.RecorderConfig import RecorderConfig
 
 
-class screenRecorder:
+class ScreenRecorder(IScreenRecorder):
       def __init__(self) -> None:     
           self.__capture = False
           self.__captureState = False
@@ -26,7 +28,7 @@ class screenRecorder:
           # else:
           #    self.__output = data +"/"+ self.videoName
 
-      def Capture(self):
+      def capture(self):
           if not self.__grab:
              img = pyautogui.screenshot()
           else:
@@ -52,7 +54,7 @@ class screenRecorder:
 
       def startCapture(self):
           self.__capture = True
-          Thread(target=self.Capture).start()
+          Thread(target=self.capture).start()
 
       def stopCapture(self):
           self.__capture = False
@@ -71,7 +73,7 @@ class screenRecorder:
              print("record stopped")
 
 if "__main__"==__name__:
-   recorder = screenRecorder()
+   recorder = ScreenRecorder()
    recorder.handleCapture()
    add_hotkey("a",recorder.handleCapture)
    add_hotkey("c",recorder.stopRecord)
