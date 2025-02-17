@@ -3,6 +3,11 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# virtual enviroments
+winvenv
+*.mp4
+*.avi
+
 # C extensions
 *.so
 
