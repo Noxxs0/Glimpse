@@ -1,0 +1,27 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+
+[project]
+name = "glimpse_dannykentala"
+version = "0.0.1"
+authors = [
+  { name="DannyKentala", email="danny@example.com" },
+]
+description = "Screen recording project"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
+
+[project.urls]
+Homepage = "https://github.com/dannykentala/Glimpse"
+Issues = "https://github.com/dannykentala/Glimpse/issues"
