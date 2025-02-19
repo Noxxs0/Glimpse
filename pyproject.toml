@@ -25,3 +25,4 @@ packages = ["src"]
 [project.urls]
 Homepage = "https://github.com/dannykentala/Glimpse"
 Issues = "https://github.com/dannykentala/Glimpse/issues"
+Docs = "https://github.com/dannykentala/Glimpse/tree/main/docs"
