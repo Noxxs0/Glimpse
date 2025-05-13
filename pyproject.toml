@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "glimpse_dannykentala"
-version = "0.0.2"
+version = "0.0.3"
 authors = [
   { name="DannyKentala", email="danny@example.com" },
 ]
@@ -20,7 +20,7 @@ license = "MIT"
 license-files = ["LICEN[CS]E*"]
 
 [tool.hatch.build.targets.wheel]
-packages = ["src"]
+packages = ["glimpse"]
 
 [project.urls]
 Homepage = "https://github.com/dannykentala/Glimpse"
